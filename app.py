@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, jsonify
+from flask import Flask, jsonify
 from flask_cors import CORS
 
 
@@ -7,7 +7,7 @@ CORS(app)
 
 
 @app.route('/<string:name>/<int:data1>/<int:data2>/<int:data3>/<int:data4>/<int:data5>')
-def api(name,data1,data2,data3,data4,data5):
+def graphreturn(name,data1,data2,data3,data4,data5):
     
     result={
             'name':name,
