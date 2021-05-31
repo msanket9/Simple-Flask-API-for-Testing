@@ -69,6 +69,16 @@ def api_predu(num_preg,glucose_conc,diastolic_bp,thickness,insulin,bmi,dpf,age):
         }
 
     return jsonify(result)
+@app.route('/<string:name>/<int:data1>/<int:data2>/<int:data3>/<int:data4>/<int:data5>')
+def api_ret(name,data1,data2,data3,data4,data5):
+    
+    result={
+            'name':name,
+            'data':[data1,data2,data3,data4,data5],
+
+        }
+
+    return jsonify(result)
 
 if __name__ == '__main__':
     app.run(debug=True)
