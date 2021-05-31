@@ -1,7 +1,4 @@
 from flask import Flask, render_template, request, redirect, jsonify
-import numpy as np
-import xgboost
-import pickle
 from flask_cors import CORS
 
 app = Flask(__name__)
